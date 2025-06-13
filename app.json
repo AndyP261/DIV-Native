@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Cameroon Identity Vault",
+    "slug": "cameroon-identity-vault",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "cm.gov.cameroon.idvault",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs access to camera to scan documents",
+        "NSPhotoLibraryUsageDescription": "This app needs access to photo library to select documents",
+        "NSFaceIDUsageDescription": "This app uses Face ID for secure authentication"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "cm.gov.cameroon.idvault",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.USE_BIOMETRIC"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-camera",
+      "expo-document-picker",
+      "expo-local-authentication"
+    ]
+  }
+}
